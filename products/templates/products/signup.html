@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}You can create an account on myshop store{% endblock %}
+{% block robots %}index, follow{% endblock %}
+{% block keywords %}signup, myshop{% endblock %}
+{% block css %}{% static "products/signup.css" %}{% endblock %}
+{% block title%}Create Account.{% endblock %} 
+
+{% block body %}
+    
+    {% include "includes/nav.html" %}
+
+
+    <form>
+        <label for="name">Full Name</label><br>
+        <input class="field" type="text" id="name" required><br>
+        <label for="email">Email</label><br>
+        <input class="field" type="email" id="email" required><br>
+        <label for="pass">Password</label><br>
+        <input class="field" type="password" id="pass" required><br>
+        <input type="checkbox" id="terms_of_use" required> <label for="terms_of_use">Agree to <a href="#">Terms and Conditions</a></label>
+        <br><br>
+        <button type="submit">SignUp</button>
+    </form>
+{% endblock%}
